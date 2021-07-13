@@ -29,12 +29,12 @@ const News = () =>  {
         
         }, [] )
         console.log(headlines)
-    
+        <div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;'><iframe src='https://www.scorebat.com/embed/v/60ec47deb6f5d/?utm_source=api&utm_medium=video&utm_campaign=dflt' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>
         function regexExpression(input) {
-            let regex = /[^']*/i;
+            let regex = /https:\/\/www\.scorebat\.com\/embed\/v\/[0-9+a-z+0-9+a-z+0-9*a-z*0-9*a-z*]\/?utm_source=api&utm_medium=video&utm_campaign=dflt/i;
             const test = regex.test(input);
             console.log(test)
-           const match = regex.exec(input);
+           const match = input.match(regex);
            console.log(match)
             
         }
