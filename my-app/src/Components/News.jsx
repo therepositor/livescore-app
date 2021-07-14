@@ -1,11 +1,12 @@
 import React from 'react';
 import NewsNavBar from './NewsNavBar';
+import useDeepCompareEffect from 'use-deep-compare-effect';
 
 const News = () =>  {
     const [headlines, setHeadlines] = React.useState([])
 
     
-    React.useEffect(() => {
+    useDeepCompareEffect(() => {
 
         const fetchHeadlines = async () => {
            
@@ -16,28 +17,23 @@ const News = () =>  {
                     "x-rapidapi-host": "free-football-soccer-videos1.p.rapidapi.com"
                 }
             })
-            // .catch(err => {
-            //     console.error(err);
-            // });
-            // console.log(data.response)
-            
+
             const data = await resp.json()
            data?.length && setHeadlines(data)
         }
            fetchHeadlines()
-        
-        
-        }, [] )
+        }, [headlines] )
+
         console.log(headlines)
-        <div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;'><iframe src='https://www.scorebat.com/embed/v/60ec47deb6f5d/?utm_source=api&utm_medium=video&utm_campaign=dflt' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>
+        
         function regexExpression(input) {
-            let regex = /https:\/\/www\.scorebat\.com\/embed\/v\/[0-9+a-z+0-9+a-z+0-9*a-z*0-9*a-z*]\/?utm_source=api&utm_medium=video&utm_campaign=dflt/i;
+            let regex = /https?:\/\/(www.)?scorebat\.com\/?embed\/v\/\w+\/\?utm_source=api&utm_medium=video&utm_campaign=dflt/i;
             const test = regex.test(input);
-            console.log(test)
+            console.log(test);
            const match = input.match(regex);
-           console.log(match)
-            
+           return match['0']
         }
+
     return  (
         <div className='news-container'>
             <div className='news_navBar'>
@@ -65,9 +61,8 @@ const News = () =>  {
                     <div key={index} className="card_preview">
                         <p className='preview_title'>{video.title}</p>
                         <div className="preview_image">
-                        <video width='320' height='240' controls>
-                            <source src={regexExpression(video.videos[0].embed)} type="video/mp4" />
-                        </video>
+                            <iframe title={video.title} src={regexExpression(video.videos[0].embed)} 
+                            width='320' height='240' frameBorder="0" allow='autoplay; fullscreen'></iframe>
                         </div>
                     </div>
                 )
