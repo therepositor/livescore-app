@@ -3,6 +3,7 @@ import Header from '../Components/Header.jsx';
 import Home from '../Components/Home';
 import Scorelist from '../Components/Scores';
 import News from '../Components/News';
+import MenuPage from '../Components/MenuPage.jsx';
 
 
 const Routes = () => (
@@ -12,6 +13,7 @@ const Routes = () => (
             <Route path='/' exact component={Home} />
             <Route path='/scores' exact component={Scorelist} /> 
             <Route path='/news' exact component={News} />
+            <Route path='/menu' exact component={MenuPage} />
         </Switch>
     </BrowserRouter>
 )
