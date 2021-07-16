@@ -61,8 +61,8 @@ const News = () =>  {
                     <div key={index} className="card_preview">
                         <p className='preview_title'>{video.title}</p>
                         <div className="preview_image">
-                            <iframe title={video.title} src={regexExpression(video.videos[0].embed)} 
-                            width='320' height='240' frameBorder="0" allow='autoplay; fullscreen'></iframe>
+                            <iframe title={video.title} src={`${regexExpression(video.videos[0].embed)}`} 
+                            width='320' height='240' frameBorder="0"></iframe>
                         </div>
                     </div>
                 )
