@@ -35,7 +35,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to = '/ls_bet'>
+                        <Link to = '/livescore-bet'>
                             <FontAwesomeIcon icon = {faDiceSix} style = {{fontSize: '2rem'}} />
                             <span>LS Bet</span> 
                         </Link>
