@@ -52,7 +52,8 @@ const News = () =>  {
                     </div>
                 </div>
             )
-          })}
+
+            })}
             </section>
             <h2>Top highlights</h2>
             <section>
@@ -68,23 +69,24 @@ const News = () =>  {
                 )
             })}
             </section>
-            <footer>
-                <h4>LiveScore: Live Sport Updates</h4>
-                
-                <p>&copy; 1998-2021 LiveScore</p>
-                <p>
-                    <a href="careers.html">Careers </a> |
-                    <a href="mobile.html"> Mobile </a> |
-                    <a href="advertise.html"> Advertise </a> |
-                    <a href="contact.html"> Contact </a> |
-                    <a href="news-publishers.html"> News Publishers </a> |
-                    <a href="modern-slavery-act.html"> Modern Slavery Act </a> |
-                    <a href="privacy-notice.html"> Privacy Notice </a> |
-                    <a href="cookie-policy.html"> Cookie Policy </a> |
-                    <a href="terms-of-use.html"> Terms of Use </a> |
-                    <a href="corporate.html"> Corporate </a>
-                </p>
-            </footer>
+
+            <footer className='news-footer'>
+                    <h5>Sports News - Latest Sports News &amp; Today's Headlines</h5>
+                    <p>Stick with LiveScore for the latest sports news from around the world. Regardless of which sport is your favourite, you’ll always find the biggest headlines and stories in one place. From football to cricket, tennis to motorsport, we cover all the top stories from the most popular sports and much, much more. Throw in betting tips for anyone 18 or over and you have a match-winning formula at your fingertips. Breaking sports news flows thick and fast and we’re always here to deliver regular updates and insight as stories develop. Regardless of the time, the sports world never sleeps as so many different leagues, events and tournaments take place globally. And that means you’ll always have sports news to consume 24/7.</p>
+                    <p>&copy; 1996 - 2021 LiveScore</p>
+                    <div className='footer-navlinks'>
+                        <a href="careers.html">Careers</a> | 
+                        <a href="mobile.html">Mobile</a> | 
+                        <a href="advertise.html">Advertise</a> | 
+                        <a href="contact.html">Contact</a> | 
+                        <a href="news-publishers.html">News Publishers</a> | 
+                        <a href="modern-slavery-act.html">Modern Slavery Act</a> | 
+                        <a href="privacy-notice.html">Privacy Notice</a> | 
+                        <a href="cookie-policy.html">Cookie Policy</a> | 
+                        <a href="terms-of-use.html">Terms of Use</a> | 
+                        <a href="corporate.html">Corporate</a>
+                    </div>
+                 </footer>
         </div>
     )
 }
