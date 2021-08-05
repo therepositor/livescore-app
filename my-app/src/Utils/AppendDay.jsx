@@ -1,5 +1,4 @@
-
-import { DateTime } from 'luxon'
+import { DateTime } from 'luxon';
 
 
 const today = DateTime.now().weekday

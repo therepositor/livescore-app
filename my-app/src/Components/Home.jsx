@@ -53,7 +53,7 @@ const Home = () => {
                         <a href="corporate.html">Corporate</a>
                     </div>
                  </footer>
-             
+          
             </div>
     )
 }

@@ -15,6 +15,9 @@ const MenuPage = () =>  {
                     "x-rapidapi-host": "football-pro.p.rapidapi.com"
                 }
             })
+            .catch(err => {
+                console.error(err);
+            });
             const data = await resp.json()
             data?.data && setCountries(data.data)
         }
@@ -29,7 +32,8 @@ const MenuPage = () =>  {
                 return (
                     <div key={index} className="country-row">
                         <div className="countryname-flag">
-                            <div className="flag"><img  width='25' height='20' src={country.image_path} alt={`${country.name} flag`} /></div>
+                            <div className="flag"><img  width='25' height='20' 
+                            src={country.image_path} alt={`${country.name} flag`} /></div>
                             <div className="country-name">{country.name}</div>
                         </div>
                         <div className="right-arrow">
@@ -37,6 +41,7 @@ const MenuPage = () =>  {
                         </div>
                     </div>
                 )
+
              })}
              <footer>
                 <p>&copy; 1996 - 2021 LiveScore</p>
@@ -53,6 +58,7 @@ const MenuPage = () =>  {
                     <a href="corporate.html">Corporate</a>
                 </div>
              </footer>
+
         </div>
 
     )

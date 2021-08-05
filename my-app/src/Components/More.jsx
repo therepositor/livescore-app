@@ -6,6 +6,7 @@ const More = () =>  {
 
     return (
         <div className='more-container'>
+
             <div className='date-nav-bar'>{AppendToday()} - {DateTime.now().toLocaleString(DateTime.DATE_MED)}</div>
             <div className='more-options'>
                 <div className='more-option'> <a href="football.html">FOOTBALL</a></div>
